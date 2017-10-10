@@ -12,9 +12,15 @@ npm install armory-embeds-game-link
 import parseGameLink from 'armory-embeds-game-link';
 
 parseGameLink('[&CvUbAAA=]');
-// <span data-armory-embeds="skins" data-armory-ids="7157"></span>
+// <div data-armory-embeds="skins" data-armory-ids="7157"></div>
 ```
 
 ## Api
 
-### `parseGameLink(string, { tag }: { tag: string }): string`
+### `parseGameLink(string, { tag }: ?Options): string`
+
+#### `Options: Object`
+
+| property | type | description |
+|-|-|-|
+| tag | `string` | Custom tag for the embed, defaults to `div`. |
