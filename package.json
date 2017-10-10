@@ -1,6 +1,6 @@
 {
   "name": "armory-embeds-game-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates armory embeds markup from a game link.",
   "main": "index.js",
   "scripts": {
