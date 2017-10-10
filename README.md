@@ -1,6 +1,6 @@
 # armory-embeds-chat-code
 
-Generates armory embeds markup from a game link.
+Generates armory embeds markup from a chat code.
 
 ## Usage
 
@@ -9,15 +9,15 @@ npm install armory-embeds-chat-code
 ```
 
 ```javascript
-import parseGameLink from 'armory-embeds-chat-code';
+import parseChatCode from 'armory-embeds-chat-code';
 
-parseGameLink('[&CvUbAAA=]');
+parseChatCode('[&CvUbAAA=]');
 // <div data-armory-embeds="skins" data-armory-ids="7157"></div>
 ```
 
 ## Api
 
-### `parseGameLink(chatcode: string, options: ?Options): string`
+### `parseChatCode(chatcode: string, options: ?Options): string`
 
 #### `Options: Object`
 

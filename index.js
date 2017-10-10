@@ -8,8 +8,8 @@ const objectToAttributes = (obj) => {
   return ` ${Object.keys(obj).map((prop) => `${prop}="${obj[prop]}"`).join(' ')}`;
 };
 
-function generateMarkup (gamecode, { tag = 'div', attributes } = {}) {
-  const data = decode(gamecode);
+function generateMarkup (chatcode, { tag = 'div', attributes } = {}) {
+  const data = decode(chatcode);
   if (!data) {
     return '[invalid]';
   }
