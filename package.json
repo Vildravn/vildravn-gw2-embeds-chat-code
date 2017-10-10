@@ -1,7 +1,7 @@
 {
-  "name": "armory-embeds-game-link",
+  "name": "armory-embeds-chat-code",
   "version": "1.0.1",
-  "description": "Generates armory embeds markup from a game link.",
+  "description": "Generates armory embeds markup from a chat code.",
   "main": "index.js",
   "scripts": {
     "test": "mocha .",
