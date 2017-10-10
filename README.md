@@ -1,15 +1,15 @@
-# armory-embeds-game-link
+# armory-embeds-chat-code
 
 Generates armory embeds markup from a game link.
 
 ## Usage
 
 ```sh
-npm install armory-embeds-game-link
+npm install armory-embeds-chat-code
 ```
 
 ```javascript
-import parseGameLink from 'armory-embeds-game-link';
+import parseGameLink from 'armory-embeds-chat-code';
 
 parseGameLink('[&CvUbAAA=]');
 // <div data-armory-embeds="skins" data-armory-ids="7157"></div>
@@ -17,10 +17,11 @@ parseGameLink('[&CvUbAAA=]');
 
 ## Api
 
-### `parseGameLink(string, { tag }: ?Options): string`
+### `parseGameLink(chatcode: string, options: ?Options): string`
 
 #### `Options: Object`
 
 | property | type | description |
 |-|-|-|
 | tag | `string` | Custom tag for the embed, defaults to `div`. |
+| attributes | `Object` | Key/value object of extra attributes to add to the markup. |

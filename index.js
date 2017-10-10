@@ -1,12 +1,35 @@
 const { decode } = require('gw2e-chat-codes');
 
-function generateMarkup (gamecode, { tag = 'div' } = {}) {
+const objectToAttributes = (obj) => {
+  if (!obj) {
+    return '';
+  }
+
+  return ` ${Object.keys(obj).map((prop) => `${prop}="${obj[prop]}"`).join(' ')}`;
+};
+
+function generateMarkup (gamecode, { tag = 'div', attributes } = {}) {
   const data = decode(gamecode);
   if (!data) {
     return '[invalid]';
   }
 
-  return `<${tag} data-armory-embeds="${data.type}s" data-armory-ids="${data.id}"></${tag}>`;
+  let attrs = attributes;
+  if (data.skin) {
+    if (!attrs) {
+      attrs = {};
+    }
+    attrs[`data-armory-${data.id}-skin`] = data.skin;
+  }
+
+  if (data.upgrades) {
+    if (!attrs) {
+      attrs = {};
+    }
+    attrs[`data-armory-${data.id}-upgrades`] = data.upgrades.join(',');
+  }
+
+  return `<${tag} data-armory-embeds="${data.type}s" data-armory-ids="${data.id}"${objectToAttributes(attrs)}></${tag}>`;
 }
 
 module.exports = generateMarkup;
