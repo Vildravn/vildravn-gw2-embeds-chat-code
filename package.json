@@ -1,0 +1,18 @@
+{
+  "name": "armory-embeds-game-link",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha .",
+    "tdd": "mocha . -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gw2e-chat-codes": "^1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
