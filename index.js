@@ -29,7 +29,7 @@ function generateMarkup (chatcode, { tag = 'div', attributes } = {}) {
     attrs[`data-armory-${data.id}-upgrades`] = data.upgrades.join(',');
   }
 
-  return `<${tag} data-armory-embeds="${data.type}s" data-armory-ids="${data.id}"${objectToAttributes(attrs)}></${tag}>`;
+  return `<${tag} data-armory-embed="${data.type}s" data-armory-ids="${data.id}"${objectToAttributes(attrs)}></${tag}>`;
 }
 
 module.exports = generateMarkup;

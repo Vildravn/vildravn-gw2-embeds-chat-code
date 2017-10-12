@@ -7,7 +7,7 @@ describe('markup', () => {
 
     const actual = markup(chatcode);
 
-    assert.equal(actual, '<div data-armory-embeds="items" data-armory-ids="77422"></div>');
+    assert.equal(actual, '<div data-armory-embed="items" data-armory-ids="77422"></div>');
   });
 
   it('should use custom tag', () => {
@@ -15,7 +15,7 @@ describe('markup', () => {
 
     const actual = markup(chatcode, { tag: 'span' });
 
-    assert.equal(actual, '<span data-armory-embeds="skins" data-armory-ids="7157"></span>');
+    assert.equal(actual, '<span data-armory-embed="skins" data-armory-ids="7157"></span>');
   });
 
   it('should return invalid text if invalid', () => {
@@ -34,7 +34,7 @@ describe('markup', () => {
 
     assert.equal(
       actual,
-      '<div data-armory-embeds="skins" data-armory-ids="7157" data-armory-blank-text="cool" class="gw2"></div>',
+      '<div data-armory-embed="skins" data-armory-ids="7157" data-armory-blank-text="cool" class="gw2"></div>',
     );
   });
 
@@ -43,6 +43,6 @@ describe('markup', () => {
 
     const actual = markup(chatcode);
 
-    assert.equal(actual, '<div data-armory-embeds="items" data-armory-ids="15475" data-armory-15475-skin="3806" data-armory-15475-upgrades="38294,47908"></div>');
+    assert.equal(actual, '<div data-armory-embed="items" data-armory-ids="15475" data-armory-15475-skin="3806" data-armory-15475-upgrades="38294,47908"></div>');
   });
 });

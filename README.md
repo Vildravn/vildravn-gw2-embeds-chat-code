@@ -14,7 +14,7 @@ npm install armory-embeds-chat-code
 import parseChatCode from 'armory-embeds-chat-code';
 
 parseChatCode('[&CvUbAAA=]');
-// <div data-armory-embeds="skins" data-armory-ids="7157"></div>
+// <div data-armory-embed="skins" data-armory-ids="7157"></div>
 ```
 
 ## Api
