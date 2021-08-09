@@ -15,8 +15,8 @@ npm install vildravn-gw2-embeds-chat-code
 ```javascript
 import parseChatCode from 'vildravn-gw2-embeds-chat-code';
 
-parseChatCode('[&CvUbAAA=]');
-// <div data-armory-embed="skins" data-armory-ids="7157"></div>
+parseChatCode('[&AgGqLgEA]');
+// <div data-armory-embed="items" data-armory-ids="77482"></div>
 ```
 
 ## Api
