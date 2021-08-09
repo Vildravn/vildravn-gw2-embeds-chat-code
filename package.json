@@ -1,6 +1,6 @@
 {
   "name": "vildravn-gw2-embeds-chat-code",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Generates armory embeds markup from a chat code.",
   "main": "index.js",
   "scripts": {
