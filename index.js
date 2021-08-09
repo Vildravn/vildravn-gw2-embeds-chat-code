@@ -17,7 +17,7 @@ function generateMarkup (chatcode, { tag = 'div', attributes } = {}) {
   }
 
   if (unsupported.includes(data.type)) {
-    return `[unsupported link: ${data.type}]`;
+    return `[unsupported link]`;
   }
 
   let attrs = attributes;
