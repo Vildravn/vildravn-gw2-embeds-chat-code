@@ -9,9 +9,15 @@ const objectToAttributes = (obj) => {
 };
 
 function generateMarkup (chatcode, { tag = 'div', attributes } = {}) {
+  const unsupported = ['map', 'recipe', 'skin', 'outfit', 'objective', 'build'];
+
   const data = decode(chatcode);
   if (!data) {
-    return '[invalid]';
+    return '[invalid link]';
+  }
+
+  if (unsupported.includes(data.type)) {
+    return `[unsupported link: ${data.type}]`;
   }
 
   let attrs = attributes;
