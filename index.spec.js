@@ -11,11 +11,11 @@ describe('markup', () => {
   });
 
   it('should use custom tag', () => {
-    const chatcode = '[&CvUbAAA=]';
+    const chatcode = '[&AgGqLgEA]';
 
     const actual = markup(chatcode, { tag: 'span' });
 
-    assert.equal(actual, '<span data-armory-embed="skins" data-armory-ids="7157"></span>');
+    assert.equal(actual, '<span data-armory-embed="items" data-armory-ids="77482"></span>');
   });
 
   it('should return invalid text if invalid', () => {
@@ -27,14 +27,14 @@ describe('markup', () => {
   });
 
   it('should pass through extra as attributes', () => {
-    const chatcode = '[&CvUbAAA=]';
+    const chatcode = '[&AgGqLgEA]';
     const attributes = { 'data-armory-blank-text': 'cool', class: 'gw2' };
 
     const actual = markup(chatcode, { attributes });
 
     assert.equal(
       actual,
-      '<div data-armory-embed="skins" data-armory-ids="7157" data-armory-blank-text="cool" class="gw2"></div>',
+      '<div data-armory-embed="items" data-armory-ids="77482" data-armory-blank-text="cool" class="gw2"></div>',
     );
   });
 
